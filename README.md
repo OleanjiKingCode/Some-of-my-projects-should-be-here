@@ -1,15 +1,11 @@
-# Basic Sample Hardhat Project
+# OLEANJI-FUTURE-DAO VOTING DAPP
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
-Try running some of the following tasks:
+using other projects as templates i start the journey i talked about in my last repo.
+this is the first phase into the voting system where by people can add their addresses to the candidate list to be voted for:
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+later possible improvement :
+---adding names and address
+----uploading of picture into the ipfs
+---etc
 ```
