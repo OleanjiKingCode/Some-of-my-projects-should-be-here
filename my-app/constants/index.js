@@ -130,4 +130,4 @@ export const abi = [
     "type": "function"
   }
 ];
-export const OleanjiVotinDapp_CONTRACT_ADDRESS = "0x3F484E941240315abe4d029e7D0Ac61Fc1543B21";
+export const OleanjiVotinDapp_CONTRACT_ADDRESS = "0x856b13Af7203785B1eb371498Bd01Ff5C0C51F43";

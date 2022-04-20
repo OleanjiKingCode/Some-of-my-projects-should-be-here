@@ -6,7 +6,21 @@
   align-items: center;
   font-family: "Courier New", Courier, monospace;
 }
+.table{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 
+}
+.td,.th{
+  border:1pz solid #dddddd;
+  text-align: left;
+  padding: 9px;
+
+}
+.tr:nth-child(even){
+  background-color: #dddddd;
+}
 .footer {
   display: flex;
   padding: 2rem 0;
