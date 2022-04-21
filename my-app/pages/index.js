@@ -20,7 +20,7 @@ export default function Home() {
 
   const [slogan, setSlogan] = useState('');
   
-  const [voteCountofCandidates, setVoteCountofCandidates] = useState(0);
+  const [max, setVoteCountofCandidates] = useState(0);
 
   const [alreadyVoted, setAlreadyVoted] = useState(false);
   // numberOfCandidates tracks the number of addresses's joined
@@ -89,6 +89,7 @@ export default function Home() {
       console.error(err);
     }
   };
+
 
   
   const checkIfAlreadyVoted = async () => {
@@ -259,7 +260,10 @@ export default function Home() {
             <br/>
             <br/>
             <br/>
-            <div>
+            <div style={{margin:'40px'}}>
+          <div className={styles.description2}>
+              Voters List
+            </div>
                 <table className={styles.table}>
                   <tr className={styles.tr}>
                     <th className={styles.th}>Voters Id</th>
@@ -268,8 +272,18 @@ export default function Home() {
                     <th className={styles.th}>Vote Count</th>
                   </tr>
                   {
+                    
                     // here we loop through the nft that was set and using i as index and key we get each item in the nft
-                    candidates.map((candidate, i) => (
+                    candidates.map((candidate, i) => {
+                      // {
+                      //   if(!candidate.Index == 0){
+                      //     return (
+                            
+                      //     )
+                      //   }
+                      // }
+                      return(
+                        !candidate.Index == 0 &&
                       <tr key={i} className={styles.tr}>
                         <td className={styles.td}>
                           {candidate.Index}
@@ -286,7 +300,7 @@ export default function Home() {
                         </td>
                       </tr> 
             
-                    ))
+                    )})
                   }
                 </table>
     
@@ -299,14 +313,24 @@ export default function Home() {
         return <button className={styles.button}>...Processing...</button>;
       } else if (alreadyVoted) {
         return(
-        <div>
-           <div className={styles.description}>
+          <div>
+          <div className={styles.description}>
               You have successfully voted for a candidate;
             </div>
-
+            <br/>
+            <br/>
+          <div style={{margin:'40px'}}>
+            
+           
+          <div className={styles.description2}>
+              Voters List
+            </div>
+            
+            
             <br/>
             <br/>
             <br/>
+            
               {/* {
                   Boolean(!num == 0) && (  */}
                     <table className={styles.table}>
@@ -318,7 +342,9 @@ export default function Home() {
                       </tr>
                       {
                         // here we loop through the nft that was set and using i as index and key we get each item in the nft
-                        candidates.map((candidate, i) => (
+                        candidates.map((candidate, i) => {
+                          return(
+                            !candidate.Index == 0 &&
                           <tr key={i} className={styles.tr}>
                             <td className={styles.td}>
                               {candidate.Index}
@@ -335,11 +361,12 @@ export default function Home() {
                             </td>
                           </tr> 
                
-                        ))
+                        )})
                       }
                     </table>
                   {/* ) */}
                 {/* } */}
+            </div>
             </div>
         )
       }
@@ -347,32 +374,39 @@ export default function Home() {
         return (
           <div>
           <div>
+        
+
           <input
           type="text"
            placeholder="name"
             
              onChange={e => setName(e.target.value)}
+             style ={{padding:'20px', marginLeft:'20px', borderRadius:'50px'}}
              
            />
-         </div>
-         <div>
+         
            <input
              type="text"
              placeholder="Slogan"
             
              onChange={e => setSlogan(e.target.value)}
+             style ={{padding:'20px', marginLeft:'20px', borderRadius:'50px'}}
              
            />
-         </div>
-          <button onClick={addAddressToVotableCandidates} className={styles.button}>
+            <button onClick={addAddressToVotableCandidates} className={styles.button}>
             Join the Candidate List
           </button>
+         </div>
+         
 
           <br/>
           <br/>
           <br/>
           <br/>
-          <div>
+          <div style={{margin:'40px'}}>
+          <div className={styles.description2}>
+              Voters List
+            </div>
               {/* {
                   Boolean(!num == 0) && (  */}
                     <table className={styles.table}>
@@ -384,7 +418,10 @@ export default function Home() {
                       </tr>
                       {
                         // here we loop through the nft that was set and using i as index and key we get each item in the nft
-                        candidates.map((candidate, i) => (
+                        candidates.map((candidate, i) => {
+                          return(
+                            !candidate.Index == 0 &&
+
                           <tr key={i} className={styles.tr}>
                             <td className={styles.td}>
                               {candidate.Index}
@@ -406,7 +443,7 @@ export default function Home() {
                             </td>
                           </tr> 
                
-                        ))
+                        )})
                       }
                     </table>
                   {/* ) */}

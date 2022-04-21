@@ -44,6 +44,17 @@
   line-height: 1;
   margin: 2rem 0;
   font-size: 1.2rem;
+  
+}
+.description2 {
+  line-height: 1;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-self: center;
+  font-size: 30px;
+  
 }
 
 .button {
@@ -53,9 +64,11 @@
   color: #ffffff;
   font-size: 15px;
   padding: 20px;
+  margin-left: 20px;
   width: 200px;
   cursor: pointer;
   margin-bottom: 2%;
+  border-radius: 50px;
 }
 @media (max-width: 1000px) {
   .main {
